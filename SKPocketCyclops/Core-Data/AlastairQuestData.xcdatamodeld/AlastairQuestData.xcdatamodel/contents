@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Level" representedClassName="Level" syncable="YES">
+        <attribute name="firstGathered" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isUnlocked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="secondGathered" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="thirdGathered" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="timeLimit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="world" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="World" inverseName="level" inverseEntity="World" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="arrowsLeft" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" syncable="YES"/>
+        <attribute name="coins" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="livesLeft" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="World" representedClassName="World" syncable="YES">
+        <attribute name="isUnlocked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="level" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Level" inverseName="world" inverseEntity="Level" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Level" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="Player" positionX="-36" positionY="27" width="128" height="90"/>
+        <element name="World" positionX="-63" positionY="-18" width="128" height="105"/>
+    </elements>
+</model>

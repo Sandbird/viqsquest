@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="130" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="main_w1" tilewidth="32" tileheight="32">
+  <image source="main_w1.png" width="928" height="782"/>
+  <tile id="2">
+   <properties>
+    <property name="Flat" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="697" name="meta_tile" tilewidth="32" tileheight="32">
+  <image source="meta_tiles.png" width="256" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="PDestroyable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Drops" value="1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Coin" value="1"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Arrow" value="1"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="HazardL" value="1"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="HazardNL" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="Collide" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="Fire" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="705" name="slope" tilewidth="32" tileheight="32">
+  <image source="slope.png" width="64" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="Up" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="walls" width="130" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztm1lOwzAQht1wLbYnJG7A+tKyHqAtOxQ4AdCybydgfeZs/FY6SjRKGjuS47SeX/oe7IwTRzO1/0ZJTyl1Di7AJeiALtgD++AAHIIjcAxOwCk4A72Ax7q6ZtXzp74X8ArewDu4BjegDwbgFtyBe/AAHsETeA58rKtrVj1/6lsCy0oUqij/bRWvEaIwRfm/UvEaIQpTlP8P8Ol5LiJ/ovyLPwhb4g9EWuIPRFriD0RaIfiDTpTQjXzPpp4SfyDSqrM/GPU7zuuT3305iT8QaWX5g6lGgigMmfiDxUZCWRWdQ9b0WNue7r0Kf/BX03XlJwOfaqIGWp7qwLU/qGsN1E06/xtg01MduHx+IDVgplbkvw64P5gGM2AWzIH5kuc1qYG0JwjVH9Be4LsO0v6gP0TXxQpYBWsG5+C1w2uAHxfFSufedx1Q/ml/aKukHuidR55H3i6qG9u6GhfZ+sp0fJPlfiuK/yvs1MQfkG+kdx6z1gfe5u/KchUd5+qXvptqVbYORtXALljwUAvcH1BdfIHv4dx53iXWfaytKI/p86xb9PPnB1njeFti3cfaivLIv2Ew7efPD7LG8bbEuo+1Fd/P6RsG0/4ifzDIaEus+1hbZe03vyP6+bpk4g94W2Ldx9oqzweY7gvUHrfvCid9rK3y8m26L9DYcfuucNLH2iov36b7BY39B5PEp9U=
+  </data>
+ </layer>
+ <layer name="meta_layer" width="130" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1lEKwjAQBcDy7n8hbbUeTaRITa0FEcU0M/Agye9uku06AAAAAAAOKUN9hkx5NOZ5Pa7Ud+2M+mzd460z975ufabwH46Z8ytD5j5Y/gO0w5sObevzOrRDH3CznAnMBwD7dE4ZAAA+d8p7YZ/u9b2kXC/3+gD4livPATyy
+  </data>
+ </layer>
+ <objectgroup name="platforms" width="130" height="30">
+  <object name="Platform" type="horizontal" x="416" y="448" width="32" height="32">
+   <properties>
+    <property name="distanceToMove" value="224"/>
+    <property name="speed" value="3"/>
+    <property name="type" value="horizontal"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="objects" width="130" height="30">
+  <object name="Checkpoint" x="1440" y="704" width="32" height="32"/>
+  <object name="UC" x="2592" y="704" width="32" height="32">
+   <properties>
+    <property name="3" value="3"/>
+    <property name="UC" value="UC"/>
+   </properties>
+  </object>
+  <object name="UC" x="2112" y="704" width="32" height="32">
+   <properties>
+    <property name="2" value="2"/>
+    <property name="UC" value="UC"/>
+   </properties>
+  </object>
+  <object name="UC" x="1760" y="288" width="32" height="32">
+   <properties>
+    <property name="1" value="1"/>
+    <property name="UC" value="UC"/>
+   </properties>
+  </object>
+  <object name="player" x="512" y="576" width="32" height="32"/>
+  <object name="exit" x="3776" y="64" width="224" height="672"/>
+ </objectgroup>
+ <objectgroup name="enemies" width="130" height="30">
+  <object name="PSKGB" type="PSKGB" x="288" y="608" width="32" height="32"/>
+  <object name="PSKGB" type="PSKGB" x="352" y="608" width="32" height="32"/>
+  <object name="PSKHound" type="PSKHound" x="960" y="672" width="32" height="32"/>
+  <object name="PSKBowman" type="PSKBowman" x="1824" y="288" width="32" height="32"/>
+  <object name="PSKTurret" type="PSKTurret" x="128" y="320" width="32" height="32">
+   <properties>
+    <property name="CeilingMounted" value="YES"/>
+    <property name="Rotation" value="M_PI_2"/>
+   </properties>
+  </object>
+  <object name="PSKTurret" type="PSKTurret" x="2272" y="704" width="32" height="32">
+   <properties>
+    <property name="CeilingMounted" value="NO"/>
+   </properties>
+  </object>
+  <object name="PSKKnight" type="PSKKnight" x="2688" y="672" width="32" height="32"/>
+ </objectgroup>
+ <layer name="background" width="130" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt0rkNwkAURdGZhLUHEtYyWDuAGAqBQqAQKMDQB5Cx1sBzRuDgwwTW2PdIVyRfMtIb5wAAAAAAAAAAAAAAKJabuquHeqqXegfcIU4V71xV1VRdNVTT/3+HOLW1ZUd1VU/11SBjX+sd4jTUliM1VhM1VbOMfa13iNtSm64Mu1rvEKe1tt0Y9rXeIU5bbbsz7Gu9K5NEHdUph2/P1eLrN9Re2x4M+1rvyuSsLuqa8/8AAADhWv63UEy8A6R4B0jl9Q4+iXclRg==
+  </data>
+ </layer>
+ <layer name="enemy_collide" width="130" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAAA+BjzwAAE=
+  </data>
+ </layer>
+ <layer name="slope" width="130" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt0rEJACAQwMDH/ZfSyVxARAVB/Ls+XSIAAAAAAAAA4L5W9pt60PC+nRc88LeVFzyQw+wFD+QyesEDAAAAAAD/6/kRB6Q=
+  </data>
+ </layer>
+</map>
